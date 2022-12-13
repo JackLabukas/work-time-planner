@@ -1,11 +1,14 @@
 $(document).ready(function () {
+  // current time
   var time = moment().format("dddd-MMMM-YYYY");
   $("#currentDay").text(time);
+  // currenrt hour
   var hour = moment().format("HH");
   console.log(hour);
+
   $(".time-block").each(function () {
     var timeDiv = $(this).attr("id").split("-")[1];
-    console.log(timeDiv);
+    // console.log(timeDiv);
     if (hour == timeDiv) {
       $(this).addClass("present");
       $(this).children(".description").addClass("white-text");
